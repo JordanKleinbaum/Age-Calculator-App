@@ -32,7 +32,6 @@ body {
 main {
   background-color: white;
   width: 90%;
-  /* max-width: 21.4375rem; */
   padding: 3.25rem 1.5rem 1.5rem 1.5rem;
   border-radius: 1.5625rem 1.5625rem 4.6875rem 1.5625rem;
   display: flex;
