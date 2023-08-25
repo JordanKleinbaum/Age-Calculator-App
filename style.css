@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+:root {
+  /* COLOR */
+  --Purple: hsl(259, 100%, 65%);
+  --Lightred: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Offwhite: hsl(0, 0%, 94%);
+  --Lightgrey: hsl(0, 0%, 86%);
+  --Smokeygrey: hsl(0, 1%, 44%);
+  --Offblack: hsl(0, 0%, 8%);
+  /* FONT */
+  --Poppins: "Poppins", sans-serif;
+  --InputFontSize: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Poppins);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--Lightgrey);
+}
+
+main {
+  background-color: white;
+  width: 90%;
+  /* max-width: 343px; */
+  padding: 52px 24px 24px 24px;
+  border-radius: 25px 25px 75px 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 19px -6px rgba(0, 0, 0, 1);
+}
+
+/* INPUT & BUTTON AREA */
+
+.entire-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.daywrapper,
+.monthwrapper,
+.yearwrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+label {
+  color: var(--Smokeygrey);
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.day-input-field,
+.month-input-field,
+.year-input-field {
+  border-radius: 8px;
+  padding: 10px 0px 10px 15px;
+  border: 1px solid var(--Lightgrey);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--Purple);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.error-day,
+.error-day-empty,
+.error-month,
+.error-month-empty,
+.error-year,
+.error-year-empty {
+  color: var(--Lightred);
+  font-weight: 800;
+  font-style: italic;
+  font-size: 10px;
+  display: none;
+}
+
+/* BUTTON AREA */
+.image-and-line-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid var(--Lightgrey);
+}
+.purple-button {
+  background-color: var(--Purple);
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  padding: 18px;
+  cursor: pointer;
+}
+
+/* RESULT AREA */
+
+.year-result-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.month-result-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.day-result-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h1,
+span {
+  font-style: italic;
+  font-weight: 800;
+  font-size: 55px;
+}
+
+span {
+  color: var(--Purple);
+}
+
+/* VIEWS FOR DESKTOP */
+@media (width > 450px) {
+  .entire-input-wrapper {
+    flex-direction: row;
+  }
+
+  .daywrapper,
+  .monthwrapper,
+  .yearwrapper {
+    width: 32%;
+  }
+
+  .result-section {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+@media (width < 900px) {
+  .result-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (width < 374px) {
+  h1,
+  span {
+    font-size: 244%;
+  }
+}

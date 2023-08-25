@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Age Calculator App</title>
+  </head>
+  <body>
+    <main>
+      <!-- INPUT SECTION  -->
+      <form action="#" class="form">
+        <section class="entire-input-wrapper">
+          <section class="daywrapper">
+            <label for="Day" class="day">DAY</label>
+            <input
+              type="number"
+              class="day-input-field"
+              placeholder="DD"
+              required
+            />
+            <p class="error-day">Must be a valid day</p>
+            <p class="error-day-empty">This field is required</p>
+          </section>
+
+          <section class="monthwrapper">
+            <label for="Month" class="month">MONTH</label>
+            <input
+              type="number"
+              class="month-input-field"
+              placeholder="MM"
+              required
+            />
+            <p class="error-month">Must be a valid month</p>
+            <p class="error-month-empty">This field is required</p>
+          </section>
+
+          <section class="yearwrapper">
+            <label for="year" class="year">YEAR</label>
+            <input
+              type="number"
+              class="year-input-field"
+              placeholder="YYYY"
+              required
+            />
+            <p class="error-year">Must be a valid year</p>
+            <p class="error-year-empty">This field is required</p>
+          </section>
+        </section>
+
+        <!-- IMAGE AND LINE SECTION -->
+        <section class="image-and-line-wrapper">
+          <hr />
+          <img
+            src="./assets/images/icon-arrow.svg"
+            alt="Purple Arrow purple-button"
+            class="purple-button"
+          />
+          <hr />
+        </section>
+      </form>
+
+      <!-- RESULT SECTION -->
+      <div class="result-section">
+        <section class="year-result-container">
+          <span class="year-result">--</span>
+          <h1>years</h1>
+        </section>
+
+        <section class="month-result-container">
+          <span class="month-result">--</span>
+          <h1>months</h1>
+        </section>
+
+        <section class="day-result-container">
+          <span class="day-result">--</span>
+          <h1>days</h1>
+        </section>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
